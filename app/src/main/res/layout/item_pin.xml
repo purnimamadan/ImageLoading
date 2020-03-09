@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:font="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    app:cardCornerRadius="@dimen/margin_4">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/margin_6">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/sdv_pin"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_240"
+            android:background="@color/black"
+            android:scaleType="centerCrop"
+            app:actualImageScaleType="centerCrop"
+            app:roundWithOverlayColor="@color/white"
+            app:roundedCornerRadius="@dimen/margin_4" />
+
+        <TextView
+            android:id="@+id/tv_category"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:inputType="none"
+            android:maxLines="1"
+            android:padding="@dimen/margin_4"
+            android:text="@string/name"
+            android:textColor="@color/black_text"
+            android:textSize="@dimen/text_size_11" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/margin_4">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/sdv_pp"
+                android:layout_width="@dimen/margin_28"
+                android:layout_height="@dimen/margin_28"
+                android:layout_marginRight="@dimen/margin_6"
+                android:background="@color/lightGrey"
+                android:scaleType="fitCenter"
+                app:placeholderImage="@color/grey_bg"
+                app:placeholderImageScaleType="centerCrop"
+                app:roundAsCircle="true"
+                app:roundWithOverlayColor="@color/white" />
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/sdv_pp"
+                android:ellipsize="end"
+                android:inputType="none"
+                android:maxLines="1"
+                android:text="@string/name"
+                android:textColor="@color/black_text"
+                android:textSize="@dimen/text_size_11" />
+
+            <TextView
+                android:id="@+id/tv_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_name"
+                android:layout_toRightOf="@id/sdv_pp"
+                android:ellipsize="end"
+                android:inputType="none"
+                android:maxLines="2"
+                android:text="@string/details"
+                android:textColor="@color/grey_fb"
+                android:textSize="@dimen/text_size_10"
+                />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
